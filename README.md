@@ -3,7 +3,7 @@
 Plataformas:
 * Raspberry Pi Model 3
 * S.O Raspian stretch 2018-11-13
-* Python 3.
+* Python 3.5.3
 * Para demas librerias 
 
 Instale los requisitos previos en su Raspberry Pi
