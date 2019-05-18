@@ -43,3 +43,8 @@ $ sudo pip install opencv-contrib-python
 En cuestión de segundos, OpenCV está listo para entrar en los paquetes de sitio de Raspberry Pi junto con cualquier otro paquete que haya instalado.
 
 Enlace: https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
+
+
+
+PINEs
+https://electronicagerman.wordpress.com/2017/05/24/servomotor-con-raspberry/
