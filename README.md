@@ -1,7 +1,7 @@
 # BottleDetection
 
 Plataformas:
-* Raspberry Pi Model 3
+* Raspberry Pi 3 Model B V1.2
 * S.O Raspian stretch 2018-11-13
 * Python 3.5.3
 * Para demas librerias 
