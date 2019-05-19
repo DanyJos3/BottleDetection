@@ -1,9 +1,9 @@
 # BottleDetection
 
 Plataformas:
-* Raspberry Pi Model 3
+* Raspberry Pi 3 Model B V1.2
 * S.O Raspian stretch 2018-11-13
-* Python 3.
+* Python 3.5.3
 * Para demas librerias 
 
 Instale los requisitos previos en su Raspberry Pi
@@ -43,3 +43,8 @@ $ sudo pip install opencv-contrib-python
 En cuestión de segundos, OpenCV está listo para entrar en los paquetes de sitio de Raspberry Pi junto con cualquier otro paquete que haya instalado.
 
 Enlace: https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
+
+
+
+PINEs
+https://electronicagerman.wordpress.com/2017/05/24/servomotor-con-raspberry/
