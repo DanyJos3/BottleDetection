@@ -5,14 +5,8 @@ import RPi.GPIO as GPIO
 import time 
 import os
 
-#GPIO.setmode(GPIO.BOARD)   #Ponemos la Raspberry en modo BOARD
-#GPIO.setup(11,GPIO.OUT)    #Ponemos el pin 21 como salida
-#p = GPIO.PWM(11,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo
+
 cap = cv2.VideoCapture(0)
-#p.start(11)
-#time.sleep(0.5)
-#pygame.mixer.init()
-#pygame.mixer.music.load("link.mp3")
 
 f=0
 flag=False
@@ -22,8 +16,6 @@ while(1):
         frame = imutils.resize(frame,400 )
         if not ret:
                 break
-        
-
        
         cascade_bote = "cascade3.xml"
         botellaCascade = cv2.CascadeClassifier(cascade_bote)
@@ -50,8 +42,6 @@ while(1):
                 print("Abrir")
 		
                 os.system("python Servo.py")
-		                #pygame.mixer.music.play()
-                #time.sleep(0.5)
                 flag=False
                 f=0
  
