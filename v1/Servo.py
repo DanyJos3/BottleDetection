@@ -2,35 +2,13 @@ import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO
 import time                #Importamos time para poder usar time.sleep
 
 GPIO.setmode(GPIO.BOARD)   #Ponemos la Raspberry en modo BOARD
-GPIO.setup(11,GPIO.OUT)    #Ponemos el pin 21 como salida
-p = GPIO.PWM(11,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo
-#p.start(2.5)               #Enviamos un pulso del 7.5% para centrar el servo
-#time.sleep(0.5)
-#p.ChangeDutyCycle(6.2)
-#time.sleep(0.5)
-#p.ChangeDutyCycle(11)
-#time.sleep(0.5)
-p.start(6)
-time.sleep(3)
-p.ChangeDutyCycle(11)
-time.sleep(0.2)
-#p.ChangeDutyCycle(11)
-#time.sleep(0.5)
-p.stop
-GPIO.cleanup()
+GPIO.setup(11,GPIO.OUT)    #Ponemos el pin 11 como salida
+p = GPIO.PWM(11,50)        #Ponemos el pin 11 en modo PWM y enviamos 50 pulsos por segundo
 
-#input("Pulse un numero y enter para comenzar")
+p.start(6)                  #Enviamos un pulso del 6% para girar el servo 90 grados
+time.sleep(3)               #pausa de 3 segundos
+p.ChangeDutyCycle(11)       #Enviamos un pulso del 11% para girar el servo hasta los 180 grados
+time.sleep(0.2)             #pausa de 0.2 segundos
 
-#try:                 
-#    while True:      #iniciamos un loop infinito
-
-       # p.ChangeDutyCycle(4.5)    #Enviamos un pulso del 4.5% para girar el servo hacia la izquierda
-       # time.sleep(0.5)           #pausa de medio segundo
- #       p.ChangeDutyCycle(10.5)   #Enviamos un pulso del 10.5% para girar el servo hacia la derecha
-  #      time.sleep(0.5)           #pausa de medio segundo
-   #     p.ChangeDutyCycle(7.5)    #Enviamos un pulso del 7.5% para centrar el servo de nuevo
-    #    time.sleep(0.5)           #pausa de medio segundo
-
-#except KeyboardInterrupt:         #Si el usuario pulsa CON#TROL+C entonces...
-  #  p.stop()                      #Detenemos el servo 
-   # GPIO.cleanup()                #Limpiamos los pines GPIO de la Raspberry y cerramos el script
+p.stop                      #Detenemos el servo 
+GPIO.cleanup()              #Limpiamos los pines GPIO de la Raspberry y cerramos el script
